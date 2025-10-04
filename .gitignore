@@ -1,46 +1,31 @@
-"# Prerequisites
-*.d
+"# Ignorar todo
+*
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# No ignorar archivos .cpp
+!*.cpp
 
-# Precompiled Headers
-*.gch
-*.pch
+# No ignorar .gitignore
+!.gitignore
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# No ignorar README.md si existe
+!README.md
 
-# Fortran module files
-*.mod
-*.smod
+# Ignorar todos los ejecutables sin extensión
+*
+!*/
+!*.*
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Ignorar archivos del sistema
+.DS_Store
 
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-debug/
-release/
-
-# IDE specific files
+# Ignorar archivos y carpetas del IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# macOS specific
-.DS_Store"
+# Ignorar archivos compilados y ejecutables
+*.exe
+*.out
+*.o
+*.obj"
