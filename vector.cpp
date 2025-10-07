@@ -1,27 +1,37 @@
-//Desarrollar un programa, donde se crea un vector de 5 elementos que sean una cadena de Strings, inicializar el vector con datos 
+//Desarrollar un programa, donde se crea un vector de 5 elementos que sean una cadena
+// de Strings, inicializar el vector con datos 
 //leidos por medio de consola. Imprimir
 //dos vectores donde el primer vector sea de manera inversa y el segundo vector sea un vector ordenado del vector original
 
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main(){
-	vector<int> numeros;
-	int n;
-	
-	cout << "ingrese numeros: \n";
-	
-	while (cin >> n && numeros.size() < 5) {
-	    numeros.push_back(n);
+	int vector[5];
+	for(int i=0; i<5; i++){
+		cout << "Ingrese un numero: ";
+		cin >> vector[i];
 	}
-
-	cout << "--inversa--" << endl;
-	for (int i = 0; i < numeros.size(); ++i) {
-		
-        cout << numeros[i] << endl;
-    }
-    cout << endl;
+	cout << "Vector inverso: ";
+	for(int i=4; i>=0; i--){
+		cout << vector[i] << " ";
+	}
+	cout << endl;
+	//Ordenar el vector
+	for(int i=0; i<5; i++){
+		for(int j=i+1; j<5; j++){
+			if(vector[i] > vector[j]){
+				int aux = vector[i];
+				vector[i] = vector[j];
+				vector[j] = aux;
+			}
+		}
+	}
+	cout << "Vector ordenado: ";
+	for(int i=0; i<5; i++){
+		cout << vector[i] << " ";
+	}
+	cout << endl;	
 
 	return 0;
 }
