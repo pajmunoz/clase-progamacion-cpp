@@ -54,6 +54,7 @@ int main()
     for (int i = 0; i < contadorPrimos; i++)
     {
         cout << primos[i] << " ";
+        
     }
     cout << endl;
     cout << "Numeros no primos: ";
